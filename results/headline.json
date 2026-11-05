@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "seed": 116002,
+    "n_attack": 2000,
+    "n_benign": 2000
+  },
+  "arms": {
+    "single": {
+      "tp": 546,
+      "fn": 1454,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.727,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.4289080911233307,
+      "mean_searches": 2.0
+    },
+    "react": {
+      "tp": 1156,
+      "fn": 844,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.422,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7325728770595691,
+      "mean_searches": 5.0
+    },
+    "selfcons": {
+      "tp": 407,
+      "fn": 1593,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.7965,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.3381803074366431,
+      "mean_searches": 6.0
+    },
+    "review": {
+      "tp": 1206,
+      "fn": 794,
+      "fp": 822,
+      "tn": 1178,
+      "fnr": 0.397,
+      "benign_escalation": 0.411,
+      "benign_accuracy": 0.589,
+      "f1": 0.5988083416087389,
+      "mean_searches": 2.0
+    },
+    "aida": {
+      "tp": 2000,
+      "fn": 0,
+      "fp": 23,
+      "tn": 1977,
+      "fnr": 0.0,
+      "benign_escalation": 0.0115,
+      "benign_accuracy": 0.9885,
+      "f1": 0.9942828734775044,
+      "mean_searches": 9.29375
+    },
+    "no_adversary": {
+      "tp": 1156,
+      "fn": 844,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.422,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7325728770595691,
+      "mean_searches": 5.0
+    },
+    "no_judge_bar": {
+      "tp": 1156,
+      "fn": 844,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.422,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7325728770595691,
+      "mean_searches": 5.0
+    },
+    "oracle": {
+      "tp": 1979,
+      "fn": 21,
+      "fp": 0,
+      "tn": 2000,
+      "fnr": 0.0105,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.9947222920331742,
+      "mean_searches": 15.0
+    }
+  },
+  "review": {
+    "corrected": 869,
+    "broken": 1031,
+    "net": -162,
+    "net_per_alert": -0.0405,
+    "net_ci95": [
+      -0.064,
+      -0.01925
+    ]
+  },
+  "trap": {
+    "n": 1533,
+    "single_dismiss_rate": 0.837573385518591,
+    "aida_dismiss_rate": 0.0
+  },
+  "trap_ci95": [
+    0.8186562296151337,
+    0.8558382257012394
+  ],
+  "diffs": {
+    "aida_minus_react": {
+      "mean": -0.42197625,
+      "ci95": [
+        -0.445,
+        -0.4005
+      ]
+    },
+    "aida_minus_no_adversary": {
+      "mean": -0.42197625,
+      "ci95": [
+        -0.445,
+        -0.4005
+      ]
+    },
+    "aida_minus_no_judge_bar": {
+      "mean": -0.42197625,
+      "ci95": [
+        -0.445,
+        -0.4005
+      ]
+    },
+    "aida_minus_oracle": {
+      "mean": -0.010481,
+      "ci95": [
+        -0.015,
+        -0.0065
+      ]
+    }
+  },
+  "bars": {
+    "D1_all_baselines_fnr_ge_0.30": true,
+    "D2_trap_dismiss_ge_0.80_and_ci_lo_ge_0.75": true,
+    "D3_net_correction_negative_and_ci_hi_lt_0": true,
+    "M1_aida_minus_react_le_-0.20_and_ci_hi_le_-0.10": true,
+    "M2_aida_minus_noadv_le_-0.15_and_ci_hi_le_-0.05": true,
+    "M3_aida_minus_nojudge_le_-0.15_and_ci_hi_le_-0.05": true,
+    "M4_searches_le_12_and_fnr_gap_vs_oracle_le_0.02": true,
+    "B1_benign_esc_le_0.10_and_acc_ge_0.90": true
+  },
+  "all_bars_pass": true
+}

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "seed": 116001,
+    "n_attack": 500,
+    "n_benign": 500
+  },
+  "arms": {
+    "single": {
+      "tp": 135,
+      "fn": 365,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.73,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.4251968503937008,
+      "mean_searches": 2.0
+    },
+    "react": {
+      "tp": 304,
+      "fn": 196,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.392,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7562189054726367,
+      "mean_searches": 5.0
+    },
+    "selfcons": {
+      "tp": 88,
+      "fn": 412,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.824,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.29931972789115646,
+      "mean_searches": 6.0
+    },
+    "review": {
+      "tp": 284,
+      "fn": 216,
+      "fp": 229,
+      "tn": 271,
+      "fnr": 0.432,
+      "benign_escalation": 0.458,
+      "benign_accuracy": 0.542,
+      "f1": 0.56071076011846,
+      "mean_searches": 2.0
+    },
+    "aida": {
+      "tp": 500,
+      "fn": 0,
+      "fp": 6,
+      "tn": 494,
+      "fnr": 0.0,
+      "benign_escalation": 0.012,
+      "benign_accuracy": 0.988,
+      "f1": 0.9940357852882703,
+      "mean_searches": 9.13
+    },
+    "no_adversary": {
+      "tp": 304,
+      "fn": 196,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.392,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7562189054726367,
+      "mean_searches": 5.0
+    },
+    "no_judge_bar": {
+      "tp": 304,
+      "fn": 196,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.392,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.7562189054726367,
+      "mean_searches": 5.0
+    },
+    "oracle": {
+      "tp": 497,
+      "fn": 3,
+      "fp": 0,
+      "tn": 500,
+      "fnr": 0.006,
+      "benign_escalation": 0.0,
+      "benign_accuracy": 1.0,
+      "f1": 0.9969909729187563,
+      "mean_searches": 15.0
+    }
+  },
+  "review": {
+    "corrected": 200,
+    "broken": 280,
+    "net": -80,
+    "net_per_alert": -0.08,
+    "net_ci95": [
+      -0.123,
+      -0.039
+    ]
+  },
+  "trap": {
+    "n": 373,
+    "single_dismiss_rate": 0.8445040214477212,
+    "aida_dismiss_rate": 0.0
+  },
+  "pilot_gate": {
+    "P1_react_fnr_ge_0.25": true,
+    "P2_trap_dismiss_ge_0.75": true,
+    "P3_net_correction_negative": true,
+    "P4_aida_fnr_le_0.05": true,
+    "pass": true
+  }
+}
